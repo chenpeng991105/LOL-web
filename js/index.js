@@ -129,7 +129,7 @@ let isHeroImgLoad = false;
 document.onscroll = function () {
     /*控制头部横幅高度变化只触发一次*/
     if (!flag) {
-        headerBanner.style.background = 'url("../img/small-banner.jpg") center no-repeat';
+        headerBanner.style.background = 'url(./img/small-banner.jpg) center no-repeat';
         headerBanner.style.height = '360px';
     }
     flag = true;
@@ -372,7 +372,7 @@ function changeHeroesWrapUl(index) {
 function loadHeroImg(type, num) {
     heroesWrapUl.innerHTML = '';
     for (let i = 1; i <= num; i++) {
-        let imgSrc = '../img/heroes/' + type + '/hero (' + i + ').png';
+        let imgSrc = './img/heroes/' + type + '/hero (' + i + ').png';
         let li = document.createElement('li');
         let img = document.createElement('img');
         let a = document.createElement('a');
