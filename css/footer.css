@@ -1,0 +1,30 @@
+/*通用底部样式*/
+footer {
+    background-color: #000;
+    text-align: center;
+}
+
+/*底部div*/
+.footer-wrap {
+    padding: 30px 0;
+}
+
+.footer-wrap ul {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.footer-wrap ul li {
+    color: #6e6e6e;
+    line-height: 24px;
+    font-size: 12px;
+}
+
+.footer-wrap ul li a {
+    color: #6e6e6e;
+    font-size: 12px;
+}
+
+.footer-wrap ul li a:hover {
+    text-decoration: underline;
+}

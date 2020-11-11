@@ -1,0 +1,519 @@
+/*通用样式*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+    font-size: inherit;
+}
+
+/*通用头部样式*/
+header {
+    width: 100%;
+}
+
+/*头部start*/
+.mini-header {
+    width: 100%;
+    min-width: 1358px;
+    height: 130px;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    background: linear-gradient(rgba(0, 0, 0, 1), transparent);
+}
+
+.header-top {
+    width: 1358px;
+    height: 78px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+/*头部logo*/
+.header-top .logo {
+    margin-top: 6px;
+}
+
+/*头部导航*/
+.header-top .header-nav {
+    display: flex;
+    height: 78px;
+    padding-top: 16px;
+    box-sizing: border-box;
+}
+
+.header-top .header-nav li {
+    width: 140px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.header-top li p, .header-top li a {
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.header-top li span {
+    font-size: 13px;
+    color: #aeaeae;
+}
+
+/*头部搜索和头部app*/
+.header-search, .header-app {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+}
+
+/*头部搜索图标框*/
+.header-search {
+    margin: 0 12px 0 75px;
+    cursor: pointer;
+}
+
+/*头部手机app图标框*/
+.header-app {
+    margin: 0 31px 0 0;
+    position: relative;
+}
+
+.comm-icon-search, .comm-icon-phone {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header-app:hover .header-app-hover {
+    display: block;
+}
+
+.header-app-hover {
+    background-image: url('../img/topfoot-spr.png');
+    background-size: 405px 178px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 211px;
+    height: 178px;
+    position: absolute;
+    top: 48px;
+    right: -86px;
+    display: none;
+    animation: top-show .2s;
+}
+
+/*隐藏内容hover显示动画*/
+@keyframes top-show {
+    0% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*头部掌盟二维码*/
+.header-zm-qrcode {
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    margin: 22px auto 0;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-zm-qrcode img {
+    width: 110px;
+    height: 110px;
+}
+
+.header-app-hover p {
+    color: #cdbe91;
+}
+
+.header-app-hover .polo {
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+}
+
+/*头部用户信息*/
+.header-userinfo {
+    width: 244px;
+    display: flex;
+    z-index: 10;
+}
+
+/*用户信息头像*/
+.userinfo-avatar {
+    display: block;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    position: relative;
+}
+
+.userinfo-avatar img {
+    width: 36px;
+    height: 36px;
+    line-height: 48px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-top: 6px;
+}
+
+.userinfo-avatar span {
+    display: block;
+    background-image: url('../img/topfoot-spr.png');
+    background-size: 405px 178px;
+    background-repeat: no-repeat;
+    background-position: -216px -117px;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*用户信息概述*/
+.userinfo-summary {
+    height: 48px;
+    line-height: 48px;
+    margin-left: 10px;
+}
+
+.userinfo-summary p {
+    font-size: 16px;
+    color: #fff;
+}
+
+.userinfo-summary .login {
+    margin-left: -4px;
+    color: #fff3d0;
+}
+
+.header-login-hover {
+    width: 310px;
+    position: absolute;
+    top: 0;
+    right: -38px;
+    background: url('../img/dark70-bg-repeat.png') repeat;
+    padding-top: 78px;
+    text-align: center;
+    display: none;
+    animation: top-show .2s;
+}
+
+.header-login-hover p {
+    width: 100%;
+    color: #848383;
+    font-size: 12px;
+}
+
+.header-login-hover p:nth-of-type(1) {
+    margin-top: 30px;
+}
+
+.header-login-hover p:nth-of-type(3) {
+    margin: 15px 0 20px;
+}
+
+/*用户中心*/
+.userhome {
+    display: block;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    background-color: #000;
+}
+
+.more-arrow, .more-arrow-1, .more-arrow-2 {
+    display: inline-block;
+    margin: -2px 0 0 5px;
+}
+
+.userhome:hover .more-arrow {
+    animation: run 1.5s linear infinite;
+}
+
+.header-nav-hover {
+    width: 100%;
+    background-color: rgba(0, 0, 0, .65);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 88px 0 32px 0;
+    display: none;
+    animation: top-show .2s;
+}
+
+.header-nav-hover-inner, .header-search-inner {
+    width: 100%;
+    max-width: 1358px;
+    min-width: 1230px;
+    margin: 0 auto;
+}
+
+.header-nav-hover-inner ul {
+    width: 55%;
+    margin-left: 161px;
+    display: flex;
+}
+
+.header-nav-hover-inner ul li {
+    width: 20%;
+}
+
+.header-nav-hover-inner ul a {
+    display: block;
+    width: 100%;
+    height: 29px;
+    color: #e1e1e1;
+    font-size: 14px;
+    text-align: center;
+}
+
+.header-nav-hover-inner ul a:hover {
+    color: #e9c06c;
+}
+
+.header-nav-hover-inner ul .icon-new, .header-nav-hover-inner ul .icon-hot {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: -2px 2px 0 0;
+}
+
+/*头部搜索框*/
+.header-search-wrap {
+    width: 100%;
+    height: 78px;
+    line-height: 78px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #081322;
+    z-index: 20;
+    transition: all .3s;
+    display: none;
+}
+
+/*头部搜索框内容区域*/
+.header-search-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*头部搜索框关闭按钮*/
+.header-search-wrap .close {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 25px 6px 0 0;
+    cursor: pointer;
+}
+
+/*头部搜索框输入框*/
+.header-search-wrap input {
+    width: 368px;
+    height: 40px;
+    line-height: 40px;
+    margin: 18px 200px 0 0;
+    padding-left: 5px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: #081322;
+    color: #fff;
+    font-size: 16px;
+}
+
+/*头部搜索框搜索图标*/
+.header-search-wrap .search {
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 15px 0 0 52px;
+}
+/*头部end*/
+
+/*more-arrow箭头运动动画*/
+@keyframes run {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(4px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(3px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/*头部图标*/
+.comm-icon-phone, .comm-icon-search, .icon-xx-1, .icon-new, .icon-hot {
+    background: url("../img/topfoot-spr.png") no-repeat;
+    background-size: 405px 178px;
+}
+
+/*手机图标*/
+.comm-icon-phone {
+    background-position: -303px -84px;
+    width: 16px;
+    height: 24px;
+}
+
+/*搜索图标*/
+.comm-icon-search {
+    background-position: -381px -39px;
+    width: 21px;
+    height: 21px;
+}
+
+/*关闭图标*/
+.icon-xx-1 {
+    background-position: -324px -84px;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+}
+
+/*小new图标*/
+.icon-new {
+    background-position: -381px -65px;
+    width: 14px;
+    height: 14px;
+}
+
+/*小hot图标*/
+.icon-hot {
+    background-position: -347px -84px;
+    width: 14px;
+    height: 14px;
+}
+
+/*页面图标*/
+.more-arrow, .more-arrow-1, .more-arrow-2, .icon-new-1, .icon-kh, .icon-fhcx, .icon-yxzl, .icon-xgzd, .icon-tft, .icon-101, .icon-yz, .icon-wxbd {
+    background: url("../img/comm-spr.png") no-repeat;
+    background-size: 393px 200px;
+    display: inline-block;
+}
+
+/*右箭头图标*/
+.more-arrow {
+    background-position: -213px -126px;
+    width: 15px;
+    height: 9px;
+}
+
+/*右箭头图标1*/
+.more-arrow-1 {
+    background-position: -342px -99px;
+    width: 15px;
+    height: 9px;
+}
+
+/*右箭头图标2*/
+.more-arrow-2 {
+    background-position: -362px -99px;
+    width: 15px;
+    height: 9px;
+}
+
+/*大new图标*/
+.icon-new-1 {
+    display: inline-block;
+    background-position: -301px -46px;
+    width: 29px;
+    height: 14px;
+}
+
+/*在线客服图标*/
+.icon-kh {
+    background-position: -316px -12px;
+    width: 22px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/*秩序殿堂图标*/
+.icon-fhcx {
+    background-position: -219px -72px;
+    width: 20px;
+    height: 22px;
+    margin-right: 5px;
+}
+
+/*英雄资料图标*/
+.icon-yxzl {
+    background-position: -343px -12px;
+    width: 23px;
+    height: 19px;
+    margin-right: 5px;
+}
+
+/*峡谷之巅图标*/
+.icon-xgzd {
+    background-position: -193px -72px;
+    width: 21px;
+    height: 22px;
+    margin-right: 5px;
+}
+
+/*云顶之弈图标*/
+.icon-tft {
+    background-position: -280px -125px;
+    width: 22px;
+    height: 19px;
+    margin-right: 5px;
+}
+
+/*攻略中心图标*/
+.icon-101 {
+    background-position: -371px -12px;
+    width: 22px;
+    height: 19px;
+    margin-right: 5px;
+}
+
+/*LOL宇宙图标*/
+.icon-yz {
+    background-position: -274px -46px;
+    width: 22px;
+    height: 19px;
+    margin-right: 5px;
+}
+
+/*微信绑定图标*/
+.icon-wxbd {
+    background-position: -193px -46px;
+    width: 22px;
+    height: 21px;
+    margin-right: 5px;
+}
